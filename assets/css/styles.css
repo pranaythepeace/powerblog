@@ -1,15 +1,17 @@
+/* General Styling */
 body {
   background-color: #141723;
-  overflow: visible; /* You might want to remove this if it causes issues */
-  text-align: center; /* Center content horizontally */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  text-align: center;
   display: flex;
-  flex-direction: column; /* Needed for centering vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  min-height: 100vh; /* Ensure full viewport height */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif; /* Add your font here */
   color: #fff; /* Set default text color to white */
+  padding: 10px; /* Prevents text from touching edges */
 }
 
 body,
@@ -27,6 +29,7 @@ html {
   --circle-stroke: #0074b3;
 }
 
+/* SVG Optimization */
 svg {
   position: absolute;
   width: 100%;
@@ -58,24 +61,48 @@ svg {
 
 .plane {
   fill: #CCC; /* Or any other color you want */
-  /* Add other plane styles here, e.g., width, height, etc. if needed */
 }
 
+/* Main Title Text */
 .main-text {
-  font-size: 4rem; /* Adjust as needed */
-  font-weight: 600; /* Slightly lighter weight */
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Dynamically scales based on screen */
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-align: center;
-  color: #fff; /* Premium white */
-  margin: 50px 0; /* More generous top/bottom margin */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Subtler shadow */
+  color: #fff;
+  margin: 30px auto; /* Center text */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 90vw; /* Prevents text from overflowing */
+  white-space: nowrap; /* Forces text to stay in one line */
 }
 
-.blog-title,.sub-text {
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: #fff;
+/* Blog Title & Subtext */
+.blog-title, .sub-text {
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Dynamic scaling */
   text-align: center;
-  margin-bottom: 20px; /* Adjust spacing as needed */
-  font-size: 2rem; /* Adjust size as needed */
-  font-weight: 600; /* Adjust weight as needed */
+  margin-bottom: 15px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .main-text {
+    font-size: clamp(1.5rem, 4vw, 2.2rem); /* Adjusts dynamically to fit */
+    max-width: 95vw; /* Ensures text doesn't exceed the screen width */
+    padding: 0 5px;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Prevents overflow */
+  }
+
+  .blog-title, .sub-text {
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Scales subtitle text */
+    max-width: 95vw;
+    white-space: nowrap; /* Prevents breaking */
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
 }
