@@ -1,13 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Power Platform Blog</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eatingsolutionsforbreakfast - Coming Soon</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- GSAP + CustomEase -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CustomEase.min.js"></script>
 </head>
+
 <body>
-    <h1>🚀 Coming Soon!</h1>
-    <p>My Power Platform blog is under construction. Stay tuned!</p>
+  <h2 class="blog-title">Microsoft Power Platform Blog</h2>
+  <h1 class="main-text">Eatingsolutionsforbreakfast.com</h1>
+  <h2 class="sub-text">Launching Soon</h2>
+
+  <svg id="patternSVG" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+    <pattern id="sqrs" width="20" height="20" patternUnits="userSpaceOnUse" id="pulseBg" viewBox="0 0 20 20" >
+        <rect class="gridRect" x="0" y="0" width="20" height="20"  fill="none"/>		
+    </pattern>
+    </defs>
+    <rect id="grid"  class="grid" y="-100" fill="url(#sqrs)" width="100%" height="200%" stroke="none"/>
+    
+    
+    </svg>
+  
+  <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+    <defs>
+  
+  
+        <filter id="glow" x="-100%" y="-100%" width="250%" height="250%">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+          <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+          <feFlood id="glowAlpha" flood-color="#FFF" flood-opacity="1"></feFlood>
+          <feComposite in2="offsetblur" operator="in"></feComposite>
+          <feMerge>
+            <feMergeNode/>          
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>	
+  </defs>
+    
+    <g >
+      <polyline class="trailLine"/>
+      <polyline class="trailLine"/>
+      <polyline class="trailLine"/>
+      <polyline class="trailLine"/>
+      <polyline class="trailLine"/>
+      <polyline class="trailLine"/>
+        <path class="plane" d="M20,13.7v-1.4l-8.6-5.1V3.5c0-1-0.6-3.5-1.4-3.5S8.6,2.4,8.6,3.5v3.7L0,12.2v1.4l8.6-1.8l0.5,5l-2.5,1.9V20
+      l3.5-0.8l3.5,0.8v-1.2L11,16.9l0.5-5L20,13.7z" />
+        <path class="plane" d="M20,13.7v-1.4l-8.6-5.1V3.5c0-1-0.6-3.5-1.4-3.5S8.6,2.4,8.6,3.5v3.7L0,12.2v1.4l8.6-1.8l0.5,5l-2.5,1.9V20
+      l3.5-0.8l3.5,0.8v-1.2L11,16.9l0.5-5L20,13.7z" />
+        <path class="plane" d="M20,13.7v-1.4l-8.6-5.1V3.5c0-1-0.6-3.5-1.4-3.5S8.6,2.4,8.6,3.5v3.7L0,12.2v1.4l8.6-1.8l0.5,5l-2.5,1.9V20
+      l3.5-0.8l3.5,0.8v-1.2L11,16.9l0.5-5L20,13.7z" />
+        <path class="plane" d="M20,13.7v-1.4l-8.6-5.1V3.5c0-1-0.6-3.5-1.4-3.5S8.6,2.4,8.6,3.5v3.7L0,12.2v1.4l8.6-1.8l0.5,5l-2.5,1.9V20
+      l3.5-0.8l3.5,0.8v-1.2L11,16.9l0.5-5L20,13.7z" />
+        <path class="plane" d="M20,13.7v-1.4l-8.6-5.1V3.5c0-1-0.6-3.5-1.4-3.5S8.6,2.4,8.6,3.5v3.7L0,12.2v1.4l8.6-1.8l0.5,5l-2.5,1.9V20
+      l3.5-0.8l3.5,0.8v-1.2L11,16.9l0.5-5L20,13.7z" />
+        <path class="plane" d="M20,13.7v-1.4l-8.6-5.1V3.5c0-1-0.6-3.5-1.4-3.5S8.6,2.4,8.6,3.5v3.7L0,12.2v1.4l8.6-1.8l0.5,5l-2.5,1.9V20
+      l3.5-0.8l3.5,0.8v-1.2L11,16.9l0.5-5L20,13.7z" />
+      </g>
+  
+  </svg>
+
+  <!-- JavaScript File -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
