@@ -1,74 +1,81 @@
-/* Reset default margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    /* Background color: RGB(249, 219, 121, 1) */
-    background: rgba(249, 219, 121, 1);
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Center hero content using Flexbox */
-  .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  /* Headings styling */
-  .hero h3 {
-    font-size: 1.5rem;
-    color: #000;
-    margin-bottom: 5px;
-    opacity: 0; /* For GSAP fade-in */
-    z-index: 2;
-  }
-  
-  .hero h4 {
-    font-size: 1rem;
-    color: #000;
-    margin-bottom: 20px;
-    opacity: 0; /* For GSAP fade-in */
-    z-index: 2;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    color: #000;
-    margin: 10px 0;
-    opacity: 0; /* For GSAP fade-in */
-    z-index: 2;
-  }
-  
-  /* "Launching Soon!" text: Black with pulsing effect */
-  .hero h2 {
-    font-size: 1.5rem;
-    color: #000;
-    margin-top: 10px;
-    opacity: 0; /* For GSAP fade-in */
-    z-index: 2;
-    animation: pulse 2s infinite; /* CSS pulsing animation */
-  }
-  
-  /* CSS keyframes for pulsing effect */
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
+body {
+  background-color: #141723;
+  overflow: visible; /* You might want to remove this if it causes issues */
+  text-align: center; /* Center content horizontally */
+  display: flex;
+  flex-direction: column; /* Needed for centering vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif; /* Add your font here */
+  color: #fff; /* Set default text color to white */
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --line-stroke: #0074b3;
+  --line-stroke-width: 1.5;
+  --circle-fill: #00adef; /* Not currently used, consider removing if not needed */
+  --circle-stroke: #0074b3;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden; /* This will be set to visible by JS */
+  overflow: visible;
+}
+
+.trailLine {
+  stroke: var(--line-stroke);
+  stroke-width: var(--line-stroke-width);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4 10;
+}
+
+.gridRect {
+  stroke: var(--circle-stroke);
+}
+
+#grid {
+  opacity: 0.085;
+}
+
+#glowAlpha {
+  flood-color: var(--circle-stroke);
+}
+
+.plane {
+  fill: #CCC; /* Or any other color you want */
+  /* Add other plane styles here, e.g., width, height, etc. if needed */
+}
+
+.main-text {
+  font-size: 4rem; /* Adjust as needed */
+  font-weight: 600; /* Slightly lighter weight */
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #fff; /* Premium white */
+  margin: 50px 0; /* More generous top/bottom margin */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Subtler shadow */
+}
+
+.blog-title,.sub-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: 600; /* Adjust weight as needed */
+}
