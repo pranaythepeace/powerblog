@@ -9,8 +9,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'IBM Plex Sans', sans-serif; /* Add your font here */
-  color: #fff; /* Set default text color to white */
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #fff;
   padding: 10px; /* Prevents text from touching edges */
 }
 
@@ -25,7 +25,7 @@ html {
 :root {
   --line-stroke: #0074b3;
   --line-stroke-width: 1.5;
-  --circle-fill: #00adef; /* Not currently used, consider removing if not needed */
+  --circle-fill: #00adef;
   --circle-stroke: #0074b3;
 }
 
@@ -34,7 +34,7 @@ svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  visibility: hidden; /* This will be set to visible by JS */
+  visibility: hidden; /* Will be set to visible by JS */
   overflow: visible;
 }
 
@@ -60,27 +60,27 @@ svg {
 }
 
 .plane {
-  fill: #CCC; /* Or any other color you want */
+  fill: #CCC;
 }
 
 /* Main Title Text */
 .main-text {
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Dynamically scales based on screen */
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Scales dynamically on larger screens */
   font-weight: 600;
   letter-spacing: 0.05em;
   text-align: center;
   color: #fff;
-  margin: 30px auto; /* Center text */
+  margin: 30px auto;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  max-width: 90vw; /* Prevents text from overflowing */
-  white-space: nowrap; /* Forces text to stay in one line */
+  max-width: 90vw;
+  white-space: nowrap; /* Force one line */
 }
 
 /* Blog Title & Subtext */
 .blog-title, .sub-text {
-  font-size: clamp(1.5rem, 3vw, 2rem); /* Dynamic scaling */
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-align: center;
   margin-bottom: 15px;
 }
@@ -88,19 +88,20 @@ svg {
 /* Mobile Optimization */
 @media (max-width: 768px) {
   .main-text {
-    font-size: clamp(1.5rem, 4vw, 2.2rem); /* Adjusts dynamically to fit */
-    max-width: 95vw; /* Ensures text doesn't exceed the screen width */
+    /* Using clamp to dynamically adjust so the full text fits in one line */
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    white-space: nowrap; /* Keep on one line */
+    max-width: 100%;
+    overflow: visible; /* Allow full display of text */
     padding: 0 5px;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Prevents overflow */
   }
-
+  
   .blog-title, .sub-text {
-    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Scales subtitle text */
-    max-width: 95vw;
-    white-space: nowrap; /* Prevents breaking */
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    max-width: 100%;
+    white-space: nowrap;
   }
-
+  
   svg {
     width: 100%;
     height: auto;
