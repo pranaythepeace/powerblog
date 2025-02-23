@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+body {
+    background-color: #141723; /* Dark, premium background */
+    color: #ffffff; /* Optional: set text color for contrast */
+  }
