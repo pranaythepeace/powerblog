@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
 body {
-    background-color: #141723; /* Dark, premium background */
-    color: #ffffff; /* Optional: set text color for contrast */
+    background-color: #141723;
+    color: #ffffff;
     font-family: 'IBM Plex Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-size-adjust: 0.5;
+}
+
+a {
+    font-size: 1rem;
+    font-weight: 500;
 }
