@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Projects">
+  <main>
+    <h1 class="in-progress-icon">🚧</h1>
+    <p class="in-progress-message">
+      Projects are currently in development. Please check back soon for updates.
+    </p>
+  </main>
+
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .in-progress-icon {
+      font-size: 10rem;
+      color: #FFA500;
+      margin: 0;
+    }
+
+    .in-progress-message {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+  </style>
+</Layout>

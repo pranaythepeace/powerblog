@@ -1,0 +1,126 @@
+---
+import { modules } from '../data/powerfulDevsModules.js';
+
+const totalModules = 93;
+const completedModules = modules.filter(module => module.status === 'completed').length;
+const completionPercentage = (completedModules / totalModules) * 100;
+const progressText = `${completedModules}/${totalModules}`;
+---
+
+<div class="powerful-devs-progress">
+  <div class="title-progress-container">
+    <h2 class="text-xl" style="font-weight: bold;">Powerful Devs Challenge Progress</h2>
+    <div class="progress-bar">
+      <div class="progress" style={`width: ${completionPercentage}%`}>
+        <span class="progress-text">{progressText}</span>
+      </div>
+    </div>
+    <p class="challenge-dates">Challenge active from February 12, 2025 until March 28, 2025</p>
+  </div>
+
+  <ul>
+    {modules.map((module) => (
+      <li style="display: flex; align-items: center;">
+        <span class={`status ${module.status}`}>
+          {module.status === 'completed' && <img src="/images/completed.svg" alt="Completed" class="module-icon" />}
+          {module.status === 'in-progress' && '🚧'}
+          {module.status === 'not-started' && <img src="/images/not-started.svg" alt="Not Started" class="module-icon"/>}
+        </span>
+        <div class="module-title-container">
+          {module.link ? (
+            <a href={module.link}>{module.title}</a>
+          ) : (
+            <span>{module.title}</span>
+          )}
+          {module.dateCompleted && <span class="date-completed"> (Completed: {module.dateCompleted})</span>}
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .powerful-devs-progress {
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Add rounded corners */
+    padding: 2rem; /* Add padding */
+    margin: 2rem auto; /* Center the container */
+  }
+
+  .title-progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar {
+    width: 250px;
+    height: 20px;
+    background-color: #eee;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  .progress {
+    height: 100%;
+    background-color: #4CAF50;
+  }
+
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #141723;
+    font-size: 0.8rem;
+  }
+
+  .challenge-dates {
+    font-size: 0.9rem;
+    color: #555;
+    margin-left: 1rem;
+  }
+
+  .powerful-devs-progress ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .powerful-devs-progress li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .status {
+    margin-right: 0.5rem;
+  }
+
+  .date-completed {
+    font-size: 0.8rem;
+    color: #4CAF50;
+    margin-left: 1rem;
+  }
+
+  .module-title-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .status.not-started + .module-title-container span {
+    color: #888;
+  }
+
+  .status.completed + .module-title-container a:hover {
+    background-color: #004225; /* Dark green background color on hover */
+    color: #eee; /* Light text color on hover */
+    padding: 0.2rem 0.4rem; /* Add some padding for visual appeal */
+    border-radius: 4px; /* Optional: Add rounded corners */
+  }
+
+  .module-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle; /* Align icons vertically with text */
+}
+</style>

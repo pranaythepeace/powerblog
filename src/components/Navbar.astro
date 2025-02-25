@@ -1,0 +1,102 @@
+---
+// src/components/Navbar.astro
+const { pathname } = Astro.url;
+---
+
+<nav class="bg-[#000000] flex flex-wrap items-center md:flex md:justify-between relative">
+  <div class="text-white font-bold text-2xl min-w-0 p-4" style="letter-spacing: 0.05em;">eatingsolutionsforbreakfast</div>
+  <button
+    data-collapse-toggle="navbar-default"
+    type="button"
+    class="flex-shrink-0 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 absolute top-4 right-4"
+    aria-controls="navbar-default"
+    aria-expanded="false"
+  >
+    <span class="sr-only">Open main menu</span>
+    <svg
+      class="w-5 h-5"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 17 14"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 1h15M1 7h15M1 13h15"
+      />
+    </svg>
+  </button>
+  <ul
+    id="navbar-links"
+    class="space-x-4 md:flex-row flex hidden md:flex md:w-auto py-4 md:py-0 bg-[#141723] md:bg-transparent pl-4 flex-col items-end absolute top-full left-0 right-0 z-10 md:static md:flex md:flex-row md:items-center"
+  >
+    <li class="text-right">
+      <a
+        href="/"
+        class=`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
+          pathname === '/' ? 'bg-[#004225]' : 'hover:bg-[#004225]'
+        }`
+      >
+        Home
+      </a>
+    </li>
+    <li class="text-right">
+      <a
+        href="/projects"
+        class=`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
+          pathname === '/projects' ? 'bg-[#004225]' : 'hover:bg-[#004225]'
+        }`
+      >
+        Projects
+      </a>
+    </li>
+    <li class="text-right">
+      <a
+        href="/aboutme"
+        class=`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
+          pathname === '/aboutme' ? 'bg-[#004225]' : 'hover:bg-[#004225]'
+        }`
+      >
+        About Me
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const navbarLinks = document.getElementById('navbar-links');
+    const navLinks = document.querySelectorAll('#navbar-links a');
+
+    button.addEventListener('click', () => {
+      navbarLinks.classList.toggle('hidden');
+      button.setAttribute('aria-expanded', navbarLinks.classList.contains('hidden') ? 'false' : 'true');
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (!navbarLinks.classList.contains('hidden')) {
+          navbarLinks.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+    .text-3xl {
+        font-size: 3rem; /* Base font size for desktop */
+        font-size-adjust: 0.5;
+    }
+
+    @media (max-width: 640px) {
+        .text-3xl {
+            font-size: 6vw; /* Adjust font size for mobile */
+        }
+    }
+</style>

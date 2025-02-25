@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+body {
+    background-color: #141723;
+    color: #ffffff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    margin-top: 1rem; /* Adjust top margin */
+    margin-bottom: 1.5rem; /* Adjust bottom margin */
+    line-height: 1.2;
+  }
+
+a {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem; /* p-3 in Tailwind terms */
+    border-radius: 0.375rem; /* rounded-md in Tailwind terms */
+    transition: background-color 0.2s; /* transition-colors duration-200 in Tailwind terms */
+    cursor: pointer;
+    background-color: transparent; /* Initial background */
+    color: white;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    background-color: #004225; /* hover:bg-[#004225] in Tailwind terms */
+  }
+
+  .blog-post-container {
+    max-width: 800px; /* Set a max width for better readability */
+    width: 90%; /* Responsive width */
+    background-color: #1A1D2A; /* Slightly lighter dark shade for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Softer border */
+    border-radius: 12px; /* Slightly larger rounded corners */
+    padding: 2.5rem; /* Increase padding for spacing */
+    margin: 3rem auto; /* More vertical spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Improve readability of text inside the blog */
+.blog-post-container h1 {
+    font-size: 2.5rem; /* Bigger heading */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.blog-post-container h2 {
+    font-size: 1.8rem; /* Subheading size */
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #cccccc;
+}
+
+.blog-post-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-container ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.certificate-link {
+    color: #F39C12; /* Orange color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+  
+  /* ... other CSS rules ... */
