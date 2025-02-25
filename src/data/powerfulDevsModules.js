@@ -1,7 +1,7 @@
 // src/data/powerfulDevsModules.js
 export const modules = [
-    { title: "Take your first steps with Power Automate for desktop", status: "completed", link: "/blog/power-automate-desktop-intro", dateCompleted: "2024-03-01" },
-    { title: "Power Automate for desktop development essentials", status: "completed", link: "/blog/power-automate-desktop-essentials", dateCompleted: "2024-03-02" },
+    { title: "Take your first steps with Power Automate for desktop", status: "completed", link: "/blog/power-automate-desktop-intro", dateCompleted: "2025-02-20" },
+    { title: "Power Automate for desktop development essentials", status: "completed", link: "/blog/power-automate-desktop-essentials", dateCompleted: "2025-02-20" },
     { title: "Get started with Power Apps canvas apps", status: "not-started", link: null, dateCompleted: null },
     { title: "Customize a canvas app in Power Apps", status: "not-started", link: null, dateCompleted: null },
     { title: "How to build the User Interface in a canvas app in Power Apps", status: "not-started", link: null, dateCompleted: null },

@@ -9,7 +9,7 @@ const progressText = `${completedModules}/${totalModules}`;
 
 <div class="powerful-devs-progress">
   <div class="title-progress-container">
-    <h2>Powerful Devs Challenge Progress</h2>
+    <h2 class="text-xl" style="font-weight: bold;">Powerful Devs Challenge Progress</h2>
     <div class="progress-bar">
       <div class="progress" style={`width: ${completionPercentage}%`}>
         <span class="progress-text">{progressText}</span>
@@ -22,9 +22,9 @@ const progressText = `${completedModules}/${totalModules}`;
     {modules.map((module) => (
       <li style="display: flex; align-items: center;">
         <span class={`status ${module.status}`}>
-          {module.status === 'completed' && '✅'}
+          {module.status === 'completed' && <img src="/images/completed.svg" alt="Completed" class="module-icon" />}
           {module.status === 'in-progress' && '🚧'}
-          {module.status === 'not-started' && '✖️'}
+          {module.status === 'not-started' && <img src="/images/not-started.svg" alt="Not Started" class="module-icon"/>}
         </span>
         <div class="module-title-container">
           {module.link ? (
@@ -41,9 +41,10 @@ const progressText = `${completedModules}/${totalModules}`;
 
 <style>
   .powerful-devs-progress {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Add rounded corners */
+    padding: 2rem; /* Add padding */
+    margin: 2rem auto; /* Center the container */
   }
 
   .title-progress-container {
@@ -115,4 +116,11 @@ const progressText = `${completedModules}/${totalModules}`;
     padding: 0.2rem 0.4rem; /* Add some padding for visual appeal */
     border-radius: 4px; /* Optional: Add rounded corners */
   }
+
+  .module-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle; /* Align icons vertically with text */
+}
 </style>
