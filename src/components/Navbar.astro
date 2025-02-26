@@ -1,6 +1,7 @@
 ---
 // src/components/Navbar.astro
 const { pathname } = Astro.url;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <nav class="bg-[#000000] flex flex-wrap items-center md:flex md:justify-between relative">
@@ -35,30 +36,30 @@ const { pathname } = Astro.url;
   >
     <li class="text-right">
       <a
-        href="/"
-        class=`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
+        href={`${baseUrl}`}
+        class={`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
           pathname === '/' ? 'bg-[#004225]' : 'hover:bg-[#004225]'
-        }`
+        }`}
       >
         Home
       </a>
     </li>
     <li class="text-right">
       <a
-        href="/projects"
-        class=`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
+        href={`${baseUrl}projects/`}
+        class={`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
           pathname === '/projects' ? 'bg-[#004225]' : 'hover:bg-[#004225]'
-        }`
+        }`}
       >
         Projects
       </a>
     </li>
     <li class="text-right">
       <a
-        href="/aboutme"
-        class=`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
+        href={`${baseUrl}aboutme/`}
+        class={`text-white p-3 rounded-md transition-colors duration-200 cursor-pointer block ${
           pathname === '/aboutme' ? 'bg-[#004225]' : 'hover:bg-[#004225]'
-        }`
+        }`}
       >
         About Me
       </a>
