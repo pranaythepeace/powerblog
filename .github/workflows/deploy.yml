@@ -29,8 +29,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Debug - List dist directory contents  # ✅ Fixed: Removed colon
-        run: ls -la dist || echo "⚠️ Warning: dist folder is missing!"
+      - name: Debug - List dist directory contents  # ✅ Fixed syntax
+        run: |
+          if [ -d "dist" ]; then
+            ls -la dist
+          else
+            echo "⚠️ Warning: dist folder is missing!"
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
