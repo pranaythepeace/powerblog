@@ -30,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3  # Updated to v3
         with:
           path: dist
 
@@ -38,5 +38,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v3  # Ensures correct GitHub Pages setup
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
