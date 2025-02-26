@@ -22,9 +22,9 @@ const progressText = `${completedModules}/${totalModules}`;
     {modules.map((module) => (
       <li style="display: flex; align-items: center;">
         <span class={`status ${module.status}`}>
-          {module.status === 'completed' && <img src="/images/completed.svg" alt="Completed" class="module-icon" />}
+          {module.status === 'completed' && <img src={`${import.meta.env.BASE_URL}images/completed.svg`} alt="Completed" class="module-icon" />}
           {module.status === 'in-progress' && '🚧'}
-          {module.status === 'not-started' && <img src="/images/not-started.svg" alt="Not Started" class="module-icon"/>}
+          {module.status === 'not-started' && <img src={`${import.meta.env.BASE_URL}images/not-started.svg`} alt="Not Started" class="module-icon" />}
         </span>
         <div class="module-title-container">
           {module.link ? (
