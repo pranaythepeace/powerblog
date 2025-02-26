@@ -29,14 +29,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Debug: List dist directory contents
+      - name: Debug - List dist directory contents  # ✅ Fixed: Removed colon
         run: ls -la dist || echo "⚠️ Warning: dist folder is missing!"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: dist
+          path: dist  # ✅ Ensuring correct artifact path
 
   deploy:
     needs: build
@@ -48,8 +47,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: github-pages
-          path: dist
+          name: github-pages  # ✅ Ensuring correct artifact name
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
