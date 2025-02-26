@@ -1,10 +1,13 @@
-name: Deploy Astro site to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
+  # Trigger the workflow every time you push to the `deploy-project` branch
   push:
-    branches:
-      - deploy-project  # Using your feature branch for deployment
+    branches: [ deploy-project ]
+  # Allows manual triggering from GitHub Actions tab
+  workflow_dispatch:
 
+# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -15,44 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
         with:
-          node-version: 18
-          cache: npm
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
-      - name: Debug - List dist directory contents  # ✅ Fixed syntax
-        run: |
-          if [ -d "dist" ]; then
-            ls -la dist
-          else
-            echo "⚠️ Warning: dist folder is missing!"
-          fi
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist  # ✅ Ensuring correct artifact path
+          node-version: 20  # ✅ Recommended Node.js version for Astro
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v3
-
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages  # ✅ Ensuring correct artifact name
-
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        id: deployment
+        uses: actions/deploy-pages@v4
