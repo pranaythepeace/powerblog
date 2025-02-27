@@ -4,8 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://pranaythepeace.github.io/powerblog/', // ✅ Set correct site URL
-    base: '/powerblog/', // ✅ Set correct base path for GitHub Pages
+    site: 'https://eatingsolutionsforbreakfast.com/', // ✅ Set correct site URL
+    base: '/', // ✅ Set correct base path for GitHub Pages
 
     vite: {
         plugins: [tailwindcss()],
