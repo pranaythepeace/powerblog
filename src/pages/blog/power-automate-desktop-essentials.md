@@ -9,8 +9,8 @@ status: "completed"
 <a href="/" class="back-link">&#x2715;</a>
 
 # Power Automate for Desktop Development Essentials
-📅 **Published Date:** February 20, 2025
-**Author:** Pranay Reddy Muthyala
+📅 **Published Date:** February 20, 2025 &nbsp;&nbsp;
+✍ **Author:** Pranay Reddy Muthyala 
 
 ## 🏁 Introduction
 

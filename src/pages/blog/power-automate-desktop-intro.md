@@ -9,8 +9,8 @@ status: "completed"
 <a href="/" class="back-link">&#x2715;</a>
 
 # Take your first steps with Power Automate for desktop 
-📅 **Published Date:** February 20, 2025
-**Author:** Pranay Reddy Muthyala
+📅 **Published Date:** February 20, 2025 &nbsp;&nbsp;
+✍ **Author:** Pranay Reddy Muthyala 
 
 ## 📌 Introduction
 

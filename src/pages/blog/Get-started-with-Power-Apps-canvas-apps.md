@@ -7,9 +7,9 @@ status: "completed"
 <div class="blog-post-container">
 <a href="/" class="back-link">&#x2715;</a>
 
-# **Get Started with Power Apps Canvas Apps**  
-📅 **Published Date:** February 28, 2025  
-✍ **Author:** Pranay Reddy Muthyala  
+# Get Started with Power Apps Canvas Apps  
+📅 **Published Date:** February 28, 2025 &nbsp;&nbsp;
+✍ **Author:** Pranay Reddy Muthyala 
 
 ## **📌 Introduction**  
 Microsoft Power Apps is revolutionizing how businesses build applications by providing a **low-code/no-code** development platform. With Power Apps **Canvas Apps**, users have full control over UI/UX, making it an excellent choice for **custom business applications**.  
