@@ -14,7 +14,7 @@ status: "completed"
 ## **📌 Introduction**  
 Microsoft Power Apps is revolutionizing how businesses build applications by providing a **low-code/no-code** development platform. With Power Apps **Canvas Apps**, users have full control over UI/UX, making it an excellent choice for **custom business applications**.  
 
-In this blog, I’ll cover the **fundamentals of Power Apps Canvas Apps**, including key concepts, core building blocks, and a **step-by-step guide** to creating your first app.
+In this blog, we’ll cover the **fundamentals of Power Apps Canvas Apps**, including key concepts, core building blocks, and a **step-by-step guide** to creating your first app.
 
 ## **⚡ What is Power Apps?**  
 Power Apps is part of the **Microsoft Power Platform**, enabling users to build applications **without extensive programming knowledge**. Canvas Apps, in particular, allow developers to **design applications from scratch**, providing complete flexibility over the **user interface and experience**.

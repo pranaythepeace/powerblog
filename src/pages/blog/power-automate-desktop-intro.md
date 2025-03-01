@@ -16,7 +16,7 @@ status: "completed"
 
 Automation is revolutionizing the way we handle repetitive tasks, and **Power Automate for Desktop**  is Microsoft's powerful tool to bring automation to your Windows machine.  
 Whether you're a beginner or an experienced user, Power Automate for Desktop enables you to automate routine tasks, saving time and increasing productivity—all without extensive coding knowledge.  
-In this post, I’ll take a step-by-step look at Power Automate for Desktop, covering its core components and how to build your first automated flow.
+In this post, we’ll take a step-by-step look at Power Automate for Desktop, covering its core components and how to build your first automated flow.
 
 ## 🖥️ Power Automate for Desktop Overview
 
