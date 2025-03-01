@@ -6,7 +6,7 @@ status: "completed"
 ---
 
 <div class="blog-post-container">
-<a href="/" class="back-link">&#x25C0; Back</a>
+<a href="/" class="back-link">&#x2715;</a>
 
 # Take your first steps with Power Automate for desktop 
 📅 **Published Date:** February 20, 2025
