@@ -16,7 +16,7 @@ status: "completed"
 
 Automating repetitive tasks with **Power Automate for Desktop** is a game-changer for productivity. Whether you're handling **data entry, file management, or UI interactions**, Power Automate for Desktop offers a no-code/low-code approach to automation.  
 
-In this post, we’ll explore the **essential skills** needed to develop robust desktop automations, covering **flow creation, logic handling, subflows, debugging, and UI automation**.
+In this post, I’ll explore the **essential skills** needed to develop robust desktop automations, covering **flow creation, logic handling, subflows, debugging, and UI automation**.
 
 ## 🔄 Understanding Power Automate for Desktop Flows
 
