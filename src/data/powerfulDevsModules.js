@@ -5,7 +5,7 @@ export const modules = [
     { title: "Get started with Power Apps canvas apps", status: "completed", link: import.meta.env.BASE_URL + "blog/Get-started-with-Power-Apps-canvas-apps", dateCompleted: "2025-02-28" },
     { title: "Customize a canvas app in Power Apps", status: "completed", link: import.meta.env.BASE_URL + "blog/customize-a-canvas-app-in-Power-Apps", dateCompleted: "2025-03-01" },
     { title: "How to build the User Interface in a canvas app in Power Apps", status: "completed", link: import.meta.env.BASE_URL + "blog/How-to-build-the-User-Interface-in-a-canvas-app-in-Power-Apps", dateCompleted: "2025-03-02" },
-    { title: "Work with external data in a Power Apps canvas app", status: "not-started", link: null, dateCompleted: null },
+    { title: "Work with external data in a Power Apps canvas app", status: "completed", link: import.meta.env.BASE_URL + "blog/Work-with-external-data-in-a-Power-Apps-canvas-app", dateCompleted: "2025-03-04" },
     { title: "Write data in a Power Apps canvas app", status: "not-started", link: null, dateCompleted: null },
     { title: "Publish, share, and maintain a canvas app", status: "not-started", link: null, dateCompleted: null },
     { title: "Guided Project - Create and manage canvas apps with Power Apps", status: "not-started", link: null, dateCompleted: null },
