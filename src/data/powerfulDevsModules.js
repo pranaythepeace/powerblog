@@ -8,7 +8,7 @@ export const modules = [
     { title: "Work with external data in a Power Apps canvas app", status: "completed", link: import.meta.env.BASE_URL + "blog/Work-with-external-data-in-a-Power-Apps-canvas-app", dateCompleted: "2025-03-04" },
     { title: "Write data in a Power Apps canvas app", status: "completed", link: import.meta.env.BASE_URL + "blog/Write-data-in-a-Power-Apps-canvas-app", dateCompleted: "2025-03-04" },
     { title: "Publish, share, and maintain a canvas app", status: "completed", link: import.meta.env.BASE_URL + "blog/Publish-share-and-maintain-a-canvas-app", dateCompleted: "2025-03-04" },
-    { title: "Guided Project - Create and manage canvas apps with Power Apps", status: "not-started", link: null, dateCompleted: null },
+    { title: "Create and manage canvas apps with Power Apps", status: "completed", link: import.meta.env.BASE_URL + "blog/Create-and-manage-canvas-apps-with-Power-Apps", dateCompleted: "2025-03-05" },
     { title: "Automate the processing of documents with the AI Builder prepackaged solution", status: "not-started", link: null, dateCompleted: null },
     { title: "Process custom documents with AI Builder", status: "not-started", link: null, dateCompleted: null },
   { title: "Use AI Builder models in Power Apps", status: "not-started", link: null, dateCompleted: null },
