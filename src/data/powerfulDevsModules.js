@@ -11,7 +11,7 @@ export const modules = [
     { title: "Create and manage canvas apps with Power Apps", status: "completed", link: import.meta.env.BASE_URL + "blog/Create-and-manage-canvas-apps-with-Power-Apps", dateCompleted: "2025-03-05" },
     { title: "Automate the processing of documents with the AI Builder prepackaged solution", status: "completed", link: import.meta.env.BASE_URL + "blog/Automate-the-processing-of-documents-with-the-AI-Builder-prepackaged-solution", dateCompleted: "2025-03-05" },
     { title: "Process custom documents with AI Builder", status: "completed", link: import.meta.env.BASE_URL + "blog/Process-custom-documents-with-AI-Builder", dateCompleted: "2025-03-05" },
-  { title: "Use AI Builder models in Power Apps", status: "not-started", link: null, dateCompleted: null },
+  { title: "Use AI Builder models in Power Apps", status: "completed", link: import.meta.env.BASE_URL + "blog/Use-AI-Builder-models-in-Power-Apps", dateCompleted: "2025-03-06" },
   { title: "Recognize text with AI Builder", status: "not-started", link: null, dateCompleted: null },
   { title: "Get started with AI Builder prediction", status: "not-started", link: null, dateCompleted: null },
   { title: "Guided Project - Create document process model and email approval with AI Builder and Power Automate", status: "not-started", link: null, dateCompleted: null },
