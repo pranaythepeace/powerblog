@@ -1,10 +1,9 @@
 ---
-// src/layouts/Layout.astro
 import "../styles/global.css";
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+const { isBlog } = Astro.props; // ✅ Extracting prop correctly
 ---
-<html lang="en">
+
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +13,23 @@ import Footer from '../components/Footer.astro';
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>eatingsolutionsforbreakfast</title>
+    <title>Eating Solutions for Breakfast</title>
   </head>
-  <body>
- <Navbar />
 
-    <main class="p-4">
-      <slot />
-      <Footer />
-    </main>
+  <body class={`relative min-h-screen ${isBlog ? 'blog-view' : ''}`} style="
+    background: #780206;
+    background: -webkit-linear-gradient(to right, #061161, #780206);
+    background: linear-gradient(to right, #061161, #780206);
+">
+
+  
+    <!-- Background Overlay (Diagonal Lines) -->
+    <div class="fixed inset-0 w-full h-full diagonal-lines opacity-20 pointer-events-none"></div>
+
+    <!-- Main Grid Layout (Handles Blog View Dynamically) -->
+    <div class="main-container">
+      <slot />  <!-- Dynamic Content from index.astro or Blog Post -->
+    </div>
+
   </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Write data in a Power Apps canvas app"
 date: 2025-03-04
 status: "completed"

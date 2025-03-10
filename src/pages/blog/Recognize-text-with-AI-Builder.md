@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Recognize text with AI Builder"
 date: 2025-03-06
 status: "completed"

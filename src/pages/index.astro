@@ -1,12 +1,136 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import PowerfulDevsProgress from '../components/PowerfulDevsProgress.astro'; // Import the component
+import { modules } from '../data/powerfulDevsModules.js'; // ✅ Corrected path
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Sort blog posts by date (newest first)
+const sortedModules = modules.sort((a, b) => {
+    const dateA = new Date(a.dateCompleted);
+    const dateB = new Date(b.dateCompleted);
+
+    return dateB.getTime() - dateA.getTime(); // Compare timestamps
+});
+
 ---
 
 <Layout>
-  <PowerfulDevsProgress /> {/* Include the component */}
+  <!-- Left: Introduction Section -->
+  <div class="intro-container">
+    <h2 class="intro-title">🚀 Advancing in Microsoft Business Applications</h2>
+    <p class="intro-text">
+      Hi, I'm <strong>Pranay Reddy Muthyala</strong>, continuously evolving my skills in Microsoft Business Applications to build impactful solutions.
+      Welcome to my <strong>Learning Hub</strong>, where I share my insights and hands-on experiences from <strong>Power Platform</strong>, <strong>Dynamics 365</strong>, and <strong>enterprise business applications</strong>.
+    </p>
+    <p class="intro-text">
+      You'll find my key takeaways, technical deep dives, and real-world applications of Microsoft Business Applications.
+      My goal is to simplify complex concepts, provide step-by-step guidance, and explore how Microsoft technologies can drive business transformation.
+    </p>
+    <p class="intro-text">
+      Follow along as I document my journey, share insights, and explore the full potential of Microsoft Business Applications!
+    </p>
+  </div>
+
+  <!-- Middle: Blog Posts -->
+  <div class="blog-container">
+    <h2 class="blog-title">Latest Blog Posts</h2>
+    <div id="blog-posts">
+      {sortedModules.map(post => (
+        <div class="blog-post">
+          <a href={post.link} class="blog-post-title">{post.title}</a>
+          <p class="blog-post-date">Published on: {post.dateCompleted}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Right: Title, Subtitle -->
+  <div class="title-container">
+    <img src="/images/profile.JPG" alt="Pranay Reddy Muthyala" class="profile-image">
+    <div class="title-content">
+      <h1 class="title-text">
+        <span class="big-text">Eating</span> <br>
+        <span class="big-text">Solutions</span> <br>
+        <span class="small-text">for</span> <br>
+        <span class="big-text">Breakfast</span>
+      </h1>
+      <p class="subtitle">
+        Microsoft Business Application Insights by  
+        <span class="highlight">Pranay Reddy Muthyala</span>
+      </p>
+      
+      <!-- Certifications Section -->
+      <div class="certification-container">
+        <div class="certification-badges">
+          <div class="badge-container">
+            <img src="/images/badges/microsoft-certified-fundamentals-badge.svg" alt="Microsoft Fundamentals Badge" class="cert-badge">
+            <span class="badge-tooltip">Microsoft Certified: Azure Fundamentals</span>
+          </div>
+
+          <div class="badge-container">
+            <img src="/images/badges/PowerPlatformDeveloperAssociate.svg" alt="PL-400 Badge" class="cert-badge">
+            <span class="badge-tooltip">Power Platform Developer Associate (PL-400)</span>
+          </div>
+
+          <div class="badge-container">
+            <img src="/images/badges/AppliedSkillsPowerAutomate.svg" alt="Power Automate Skills Badge" class="cert-badge">
+            <span class="badge-tooltip">Applied Skills: Power Automate</span>
+          </div>
+
+          <div class="badge-container">
+            <img src="/images/badges/AppliedSkillsCanvasApps.svg" alt="Canvas Apps Badge" class="cert-badge">
+            <span class="badge-tooltip">Applied Skills: Canvas Apps</span>
+          </div>
+
+          <div class="badge-container">
+            <img src="/images/badges/AppliedSkillsModelDrivenApps.svg" alt="Model Driven Apps Badge" class="cert-badge">
+            <span class="badge-tooltip">Applied Skills: Model-Driven Apps</span>
+          </div>
+
+          <div class="badge-container">
+            <img src="/images/badges/ResponsiveWebDesign.svg" alt="Responsive Web Design - freeCodeCamp" class="cert-badge">
+            <span class="badge-tooltip">Responsive Web Design - freeCodeCamp</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+<div class="certification-container">
+  <div class="certification-badges">
+      <!-- Existing Certification Badges -->
+  </div>
+</div>
+
+<!-- Social & Contact Section (Now Separate) -->
+<div class="social-contact-container">
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/pranayreddymuthyala/" target="_blank" class="social-btn linkedin">
+      <img src="/images/social/Linkedin.png" alt="LinkedIn" class="social-icon">
+  </a>
+
+  <!-- GitHub Button -->
+  <a href="https://github.com/pranaythepeace" target="_blank" class="social-btn github">
+      <img src="/images/social/GitHub_Logo.png" alt="GitHub" class="social-icon">
+  </a>
+
+  <!-- Email -->
+  <p class="contact-item">
+      📧Email Me <a href="mailto:pranay@eatingsolutionsforbreakfast.com" class="contact-link">pranay@eatingsolutionsforbreakfast.com</a>
+  </p>
+
+  <!-- Phone -->
+  <p class="contact-item">
+      📞 <a href="tel:+12038096916" class="contact-link">+1 (203) 809 6916</a>
+  </p>
+
+  <p class="contact-item">
+    📖 <a href="/aboutme" class="contact-link">About Me</a>
+</p>
+
+<p class="contact-item">
+  <a href="/privacy" class="contact-link">Privacy Policy</a>
+</p>
+
+</div>
+
+    </div>
+  </div>
 </Layout>

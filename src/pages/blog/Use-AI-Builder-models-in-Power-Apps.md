@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Use AI Builder models in Power Apps"
 date: 2025-03-06
 status: "completed"

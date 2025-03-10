@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Get started with AI Builder prediction"
 date: 2025-03-07
 status: "completed"

@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Automate the processing of documents with the AI Builder prepackaged solution"
 date: 2025-03-05
 status: "completed"

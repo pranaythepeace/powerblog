@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Create and manage canvas apps with Power Apps"
 date: 2025-03-05
 status: "completed"

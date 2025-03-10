@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Process custom documents with AI Builder"
 date: 2025-03-05
 status: "completed"

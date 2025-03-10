@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "How to build the User Interface in a canvas app in Power Apps"
 date: 2025-03-02
 status: "completed"

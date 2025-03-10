@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Customize a canvas app in Power Apps"
 date: 2025-03-01
 status: "completed"

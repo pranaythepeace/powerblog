@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Get-started-with-Power-Apps-canvas-apps"
 date: 2025-02-28
 status: "completed"

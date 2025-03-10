@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Power Automate for desktop development essentials"
 date: 2025-02-20
 status: "completed"

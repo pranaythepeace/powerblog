@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Layout.astro
+isBlog: true
 title: "Take your first steps with Power Automate for desktop"
 date: 2025-02-20
 status: "completed"
