@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `deploy-project` branch
+  # Trigger the workflow every time you push to the New-face-lift branch
   push:
     branches: [ New-face-lift ]
   # Allows manual triggering from GitHub Actions tab
