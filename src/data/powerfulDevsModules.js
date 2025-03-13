@@ -13,5 +13,6 @@ export const modules = [
     { title: "Process custom documents with AI Builder", status: "completed", link: import.meta.env.BASE_URL + "blog/Process-custom-documents-with-AI-Builder", dateCompleted: "2025-03-05" },
   { title: "Use AI Builder models in Power Apps", status: "completed", link: import.meta.env.BASE_URL + "blog/Use-AI-Builder-models-in-Power-Apps", dateCompleted: "2025-03-06" },
   { title: "Recognize text with AI Builder", status: "completed", link: import.meta.env.BASE_URL + "blog/Recognize-text-with-AI-Builder", dateCompleted: "2025-03-06" },
-  { title: "Get started with AI Builder prediction", status: "completed", link: import.meta.env.BASE_URL + "blog/Get-started-with-AI-Builder-prediction", dateCompleted: "2025-03-07" }
+  { title: "Get started with AI Builder prediction", status: "completed", link: import.meta.env.BASE_URL + "blog/Get-started-with-AI-Builder-prediction", dateCompleted: "2025-03-07" },
+  { title: "Create document process model and email approval with AI Builder and Power Automate", status: "completed", link: import.meta.env.BASE_URL + "blog/Create-document-process-model-and-email-approval-with-AI-Builder-and-Power-Automate", dateCompleted: "2025-03-13" },
   ];

@@ -47,7 +47,7 @@ body {
 
 .blog-container {
     overflow-y: auto; 
-    max-height: 96vh; 
+    max-height: 100vh; 
     width: 100%;
     background: rgba(128, 24, 24, 0.1); 
     padding: 2rem;
@@ -494,8 +494,8 @@ body {
     }
 
     .blog-container {
-        max-height: none;  /* Remove height limit */
-        overflow: visible; /* Prevents scroll issues */
+        overflow-y: auto; 
+        max-height: 100vh; 
         padding: 1rem;
     }
 }
